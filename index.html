@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>usando bulma</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <style>
+        body{
+            background-color: rgb(56, 68, 79);
+            background-size: 100%
+        }
+        .centralizar{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .img{
+            margin: auto;
+            width: 300px;
+            background-color: rgb(56, 52, 52);
+            padding: 40px;
+            margin: 20px 0;
+            border-radius: 50%;
+        }
+        .message{
+            width: 60%;
+        }
+        .title{
+            color: rgb(9, 210, 210);
+        }
+        .subtitle{
+            color: white;
+            border: 1px solid white;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .subtitle:hover{
+            background-color: white;
+            color: gray;
+        }
+        .container{
+            border: 1px solid white;
+            padding: 30px;
+            margin: 0px 30px;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.538);
+        }
+    </style>
+</head>
+<body>
+    <section class="section" >
+        <div class="container centralizar">
+            <p class="title">
+                Treinamento com bulma
+            </p>
+            <p class="subtitle">
+                será se dá certo?
+            </p>
+            <img src="1682769893102.png" alt="" class="img .centralizar">
+            <article class="message">
+                <div class="message-header">
+                  <p>Minha opinião sobre o uso desse framework</p>
+                  <button class="delete" aria-label="delete"></button>
+                </div>
+                <div class="message-body">
+                  Bom, sobre o uso do bulma achei tudo muito interessante, entanto vou focar mais um pouco no 
+                  <strong>css puro, flexbox e grid</strong>, pra que mais na frente eu possa utilizar com segurança de que o uso é so para acelerar o processo. 
+                  Concluindo, foi bom apreder sobre e irei utilizar mais na frente este recurso.
+                </div>
+              </article>
+        </div>
+    </section>
+</body>
+</html>
