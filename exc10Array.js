@@ -3,17 +3,17 @@ const filmes = [
     {filme: 'Avatar', ano:2021},
     {filme: 'kimetsu no yaiba', ano:2022}
 ]
-let prim_letra = []
+let filmeOrdem = []
 const verificador = filmes.reduce((count, filmeAtual)=>{
     
     let firstletter =  filmeAtual.filme
-    prim_letra.push(firstletter)
+    filmeOrdem.push(firstletter)
 
-    return prim_letra
+    return filmeOrdem
 }, 0)
-let organizador = prim_letra.sort()
+let organizador = filmeOrdem.sort()
 for (c of organizador){
-    return c
+    console.log(c)
 }
 
 
