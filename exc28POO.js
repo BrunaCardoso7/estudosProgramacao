@@ -10,10 +10,10 @@ class agenda{
     constructor(){
         this.contatos = []
     }
-    adicionarContatos(){
-        this.contatos.push(contato)
+    adicionarContatos(vlr){
+        this.contatos.push(vlr)
     }
 }
 let bruna = new contato ("burna", 98063735)
 this.contatos.adicionarContatos(bruna)
-console.log(bruna.adicionarContatos())
+console.log(bruna)
