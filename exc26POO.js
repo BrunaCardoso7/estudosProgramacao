@@ -15,7 +15,7 @@ class carro{
         return this.velocidade = 0
     }
     consultarVelocidade(){
-        return ´velocidade ${this.velocidade}´
+        return `velocidade ${this.velocidade}`
     }
 }
 let civic = new carro("Honda", "Civic", 2022, 20)
