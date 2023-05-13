@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>treinando inserção de elemento com DOM</title>
+    <style>
+        body{
+            background-color: rgb(21, 21, 54);
+        }
+        h1{
+            font-family: monospace;
+            font-weight: bolder;
+            font-size: 40px;
+        }
+        #conteiner-text{
+            display: flex;
+            flex-direction: column;
+
+        }
+        #campo-text{
+            width: 70%;
+            background-color: rgb(191, 191, 191);
+            height: 40px;
+            border: none;
+            padding: 10px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            outline: none;
+            font-size: 22px;
+            color: green;
+            font-family: monospace;
+        }
+        #btn-adicionar{
+            background-color: rgb(29, 144, 39);
+            color: lightgoldenrodyellow;
+            border: none;
+            padding: 10px;
+            font-family: monospace;
+            border-radius: 10px;
+            box-shadow: 1px 3px 10px whitesmoke;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="conteiner">
+        <h1>adicionando elementos</h1>
+        <button id="btn-adicionar" onclick="adicionar()">Adicionar</button>
+        <div id="conteiner-text">
+            <input type="text" name="text" id="campo-text">
+        </div>
+    </div>
+    <script src="exc45DOM.js"></script>
+</body>
+</html>
