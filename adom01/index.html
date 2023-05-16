@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #conteiner{
+            height: 500px;
+            width: 500px;
+            background-color: darkgrey;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #conteiner-text{
+            width: 300px;
+            font-size: 2em;
+            font-family: sans-serif;
+            font-weight: 700;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+        #btn-clicar{
+            border: 5px solid gray;
+            width: 200px;
+            height: 50px;
+            background-color: white;
+            border-radius: 10px;
+            font-family: monospace;
+            font-size: 1.3em;
+            color: gray;
+        }
+        #btn-clicar:hover{
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="conteiner">
+        <p id="conteiner-text">
+            Sua missão é clicar em um botão e ver o que acontece!
+        </p>
+    </div>
+    <button id="btn-clicar" onclick = "clicou()" >clique aqui</button>
+    <script src="index.js"></script>
+</body>
+</html>
