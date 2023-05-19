@@ -5,19 +5,19 @@
 //     console.log(diferenca)
 // }unction solucao(pesos) {
     // seu codigo aqui
-function solucao(...pesos) {
-    let diferencaPeso = 0
-    for (i of pesos){
-        let diferença = Math.abs(diferencaPeso -= i)
-        return diferença
+    function solucao(pesos) {
+        // seu codigo aqui
+        let arr = [...pesos]; 
+    
+        let diferencaPeso = arr.reduce((acumulador, valorAtual)=>{
+            return valorAtual - acumulador;
+        },0)
+    
+        if (diferencaPeso >= 0 && diferencaPeso <= 5){
+            return "PODEM LUTAR";
+        }else if (diferencaPeso > 5){
+            return "NAO PODEM LUTAR";
+        }
     }
-    if (diferença <= 5){
-        console.log( "PODEM LUTAR");
-        break
-    }else{
-        console.log( "NAO PODEM LUTAR");
-        break
-    }
-}
 solucao(20, 18)
 
