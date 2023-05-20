@@ -17,7 +17,7 @@ class ContaBancaria{
         return this.saldo
     }
 }
-let joao = new ContaBancaria("JOão Alves", 1400, 1000)
-joao.depositar(500)
-joao.sacar(200)
+let jao = new ContaBancaria("JOão Alves", 1400, 1000)
+jao.depositar(500)
+jao.sacar(200)
 console.log(joao.consultarSaldo())
