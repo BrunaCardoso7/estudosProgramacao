@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const text = document.createElement('p');
+        let nome = text.textContent = 'bruna';
+
+        const elementoPai = document.querySelector('body')
+        elementoPai.parentElement.appendChild(text)
+        
+        let newArray = Array.from(nome);
+        newArray.forEach((i, index)=>{
+            setTimeout(function(){
+                const span = document.createElement('span')
+                span.textContent = i;
+
+                elementoPai.appendChild(span)
+            },1000*(index+1))
+        })
+
+    </script>
+</body>
+</html>
