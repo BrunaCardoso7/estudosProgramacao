@@ -10,19 +10,21 @@
     
     <script>
         const text = document.createElement('p');
-        let nome = text.textContent = 'bruna';
+        let nome = text.textContent = 'boa noite, grupo';
+        text.style.fontSize = '2em';
 
-        const elementoPai = document.querySelector('body')
-        elementoPai.parentElement.appendChild(text)
+        const elementoPai = document.querySelector('body');
+        // elementoPai.parentElement.appendChild(text);
         
         let newArray = Array.from(nome);
         newArray.forEach((i, index)=>{
             setTimeout(function(){
-                const span = document.createElement('span')
+                const span = document.createElement('span');
+                span.style.fontSize = '3em';
                 span.textContent = i;
 
-                elementoPai.appendChild(span)
-            },1000*(index+1))
+                elementoPai.appendChild(span);
+            },200*(index+1));
         })
 
     </script>
