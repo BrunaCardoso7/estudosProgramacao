@@ -9,7 +9,6 @@ const sum = function (...valores){
 
 const media = function (...notas){
 
-
     let resultado = notas.reduce((notas, notaAtual)=>{
         return notas + notaAtual
     })/notas.length
@@ -17,3 +16,4 @@ const media = function (...notas){
 }
 console.log(sum(1, 2, 3))
 console.log(media(1, 2, 3))
+console.log(sum)
