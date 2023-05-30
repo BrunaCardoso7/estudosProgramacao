@@ -1,4 +1,5 @@
 function sum() {
+
     // const numbers = Array.from(arguments)
     const numbers = [...arguments]
     return numbers.reduce(function (sum, atual) {
@@ -8,3 +9,4 @@ function sum() {
 function avarege() {
     return sum(...arguments) / arguments.length
 }
+
