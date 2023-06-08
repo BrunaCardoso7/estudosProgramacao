@@ -23,7 +23,7 @@
                     <li>item 2.c</li>
                 </ul>
             </li>
-            <li>item <a href="#">link</a></li>
+            <li>item <a href="#"> link</a></li>
         </ul>
     </div>
     <script>
@@ -33,6 +33,15 @@
         console.log(h2.nextElementSibling)
         console.log(h2.previousElementSibling)
         console.log(h2.parentElement)
+
+        const list = document.querySelector('ul ul')
+        const link =  document.querySelector('a')
+
+        console.log(link)
+        console.log(link.parentElement)
+        console.log(link.parentElement.firstElementChild)
+        console.log(list.parentElement.lastElementChild)
+        console.log(list.firstElementChild.hasChildNodes())
     </script>
 </body>
 </html>
