@@ -42,6 +42,18 @@
         console.log(link.parentElement.firstElementChild)
         console.log(list.parentElement.lastElementChild)
         console.log(list.firstElementChild.hasChildNodes())
+
+        const title = document.createElement('h1')
+        title.setAttribute('id', 'titulo')
+        title.setAttribute('style', 'color: blue')
+        title.textContent = 'twiiiiiiiice'
+        
+        const elementopai =  document.querySelector('.conteiner')
+        // elementopai.prepend(title)
+        elementopai.insertBefore(title, list)    
+
+
+        
     </script>
 </body>
 </html>
