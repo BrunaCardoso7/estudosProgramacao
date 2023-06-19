@@ -9,9 +9,8 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
-    sans-serif;
     letter-spacing: .1rem;   
-        display: flex;
+    display: flex;
 }
 
 body,html{
