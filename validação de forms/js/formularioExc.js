@@ -29,11 +29,9 @@ input__descricao.addEventListener("input", function(){
     contarCaracteres()
 })
 
-
 checkBox.addEventListener("click", function(){
     verificarChecked()
 })
-
 
 function contarCaracteres(){
 
@@ -42,6 +40,7 @@ function contarCaracteres(){
     conta.textContent = numerosRestante
     
 }
+
 function verificarChecked(){
     if (checkBox.checked){
         btn__add.disabled = false
@@ -49,6 +48,7 @@ function verificarChecked(){
         btn__add.disabled = true
     }
 }
+
 function verificarCamposInputs(e){
     if(!input__titulo.value){
         showerror('preencha o campo titulo')
