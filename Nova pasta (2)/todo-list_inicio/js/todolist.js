@@ -39,6 +39,40 @@
 
         const i_edit = document.createElement('i')
         i_edit.className = 'fas fa-edit'
+
+        i_edit.addEventListener('click', function (e){
+
+            const conteinerDiv = document.createElement('div')
+            conteinerDiv.className = 'editContainer'
+            conteinerDiv.style.display = 'flex'
+
+            const inputEdit = document.createElement('input')
+            inputEdit.setAttribute('type', 'text')
+            inputEdit.className = 'editInput'
+            conteinerDiv.appendChild(inputEdit)
+            
+            const btn_edit =  document.createElement('button')
+            btn_edit.className = 'editButton'
+            btn_edit.textContent = 'Edit'
+            conteinerDiv.appendChild(btn_edit)
+            
+            const btn_cancel =  document.createElement('button')
+            btn_cancel.className = 'cancelButton'
+            btn_cancel.textContent = 'Cancel'
+            btn_cancel.addEventListener('click', function (){
+                conteinerDiv.style.display = 'none'
+            })
+            conteinerDiv.appendChild(btn_cancel)
+            
+
+
+            li.appendChild(conteinerDiv)
+
+        })
+
+
+
+
         
         const i_remove = document.createElement('i')
         i_remove.className = 'fas fa-trash-alt'
