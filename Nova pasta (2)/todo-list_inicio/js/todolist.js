@@ -9,12 +9,17 @@
     
     function getSavedData(){
 
-        let taskData = localStorage.getItem('task')
-        taskData = JSON.parse(taskData)
-
-        return taskData && taskData.length ? taskData : [
+        // let taskData = localStorage.getItem('task')
+        // taskData = JSON.parse(taskData)
+        
+        return[
             {
                 name:"task 1",
+                createAt: Date.now(),
+                completed: false
+            },
+            {
+                name:"task 2",
                 createAt: Date.now(),
                 completed: false
             }
@@ -23,13 +28,14 @@
     }
 
 
-    const arrTask = getSavedData()
+    let arrTask = getSavedData()
 
 
     function setNewData(){
-        localStorage.getItem('tasks', JSON.stringify(arrTask))
+        localStorage.getItem('tasks', arrTask)
     }
 
+    setNewData()
     
     function generatorAddTask(obj){
 
@@ -108,7 +114,7 @@
             completed: false
         })
 
-        setNewData()
+        // setNewData()
 
     }
 
@@ -153,14 +159,14 @@
                 const valueInput = currentLi.querySelector('.editInput').value
                 arrTask[currentLiIndex].name = valueInput
                 renderTask()
-                setNewData()
+                // setNewData()
             },
 
 
             checkButton: function(){
                 const checked = currentLi.querySelector('.fa-check')
                 checked.style.display = 'block'
-                setNewData()
+                // setNewData()
             }
 
         }
@@ -181,7 +187,7 @@
 
         renderTask()
 
-        
+
         itemInput.value = ''
         itemInput.focus
 
