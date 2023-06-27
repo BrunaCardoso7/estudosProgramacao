@@ -4,12 +4,18 @@
 
 
 	function Task(name, completed, createdAt, updatedAt){
-        this.name = name
-        this.completed = false
-        this.createdAt = new Date()
-        this.updatedAt = null
+        if(!name){
+            throw new Error ('Task required paramether: name')
+        }
+        let _name = name
+        this.completed = completed || false
+        this.createdAt = createdAt || Date.now()
+        this.updatedAt = updatedAt || null
         this.toggleDone = function(){
-            this.completed = true
+            this.completed = !this.completed
+        }
+        this.getName = function(){
+            return _name
         }
 		// crie uma funcao construtora chamada Task. 
         // essa funcao recebe por parametro obrigatório o nome da tarefa
@@ -48,6 +54,10 @@
 
     // a partir de um array de objetos literais, crie um array contendo instancias de Tasks. 
     // Essa array deve chamar arrInstancesTasks
+    let arrInstancesTasks = arrTasks.map(task=>{
+        let {name, completed, createdAt, updatedAt} = task
+        return new Task(name, completed, createdAt, updatedAt)
+    })
 	// const arrInstancesTasks = DESCOMENTE ESSA LINHA E RESOLVA O ENUNCIADO
 
 
@@ -125,6 +135,7 @@
 
     function addTask(task) {
         // adicione uma nova instancia de Task
+        arrInstancesTasks.push(new Task(task))
         renderTasks()
 
     }
@@ -169,7 +180,7 @@
             checkButton: function () {
 
                 // DEVE USAR O MÉTODO toggleDone do objeto correto
-
+                arrInstancesTasks[currentLiIndex].toggleDone()
 	            renderTasks()
             }
         }
